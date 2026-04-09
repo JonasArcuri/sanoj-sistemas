@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Space Grotesk", sans-serif;
+  --font-body: "Manrope", sans-serif;
+  --font-label: "Inter", sans-serif;
+
+  --color-surface-dim: #000f1f;
+  --color-surface-container-low: #011427;
+  --color-surface-container-high: #072138;
+  --color-surface-container-highest: #0c2740;
+  --color-primary: #54c3ff;
+  --color-primary-dim: #02aeef;
+  --color-error: #ff716c;
+  --color-on-surface: #d6e7ff;
+  --color-on-surface-variant: #9badc3;
+  --color-outline-variant: #39495d;
+  --color-on-primary: #003b54;
+}
+
+@layer base {
+  body {
+    @apply bg-surface-dim text-on-surface font-body;
+  }
+}
+
+.pulse-gradient {
+  background: linear-gradient(90deg, #54c3ff, #a5e1ff, #54c3ff);
+  background-size: 200% auto;
+  animation: pulse-bg 4s linear infinite;
+}
+
+@keyframes pulse-bg {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+.text-gradient-pulse {
+  @apply text-transparent bg-clip-text;
+  background: linear-gradient(90deg, #54c3ff, #a5e1ff, #54c3ff);
+  background-size: 200% auto;
+  animation: pulse-bg 4s linear infinite;
+  -webkit-background-clip: text;
+}
+
+.glass-card {
+  background: rgba(12, 39, 64, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
