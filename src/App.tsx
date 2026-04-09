@@ -375,8 +375,8 @@ export default function App() {
                 <div className="space-y-8">
                   <ContactInfo
                     icon={<Phone className="w-6 h-6" />}
-                    label="Telefone / WhatsApp"
-                    value="47 98881-4411"
+                    label="Whatsapp Comercial"
+                    value="(47) 9 9906-5181"
                   />
                   <ContactInfo
                     icon={<MapPin className="w-6 h-6" />}
@@ -536,7 +536,7 @@ export default function App() {
         animate={{ scale: 1 }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        href="https://wa.me/47988814411"
+        href="https://wa.me/47999065181"
         className="fixed bottom-8 right-8 z-50 w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl md:hidden"
       >
         <Phone className="w-8 h-8 fill-current" />
