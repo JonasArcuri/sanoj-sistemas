@@ -5,6 +5,7 @@
 
 import { motion } from "motion/react";
 import { type ReactNode } from "react";
+import logo from "/assets/Logo.png";
 import {
   Terminal,
   Globe,
@@ -32,7 +33,7 @@ export default function App() {
           <div className="flex items-center gap-3">
             <div className="w-20 h-20 rounded-lg overflow-hidden">
               <img
-                src="/assets/logo.png"
+                src={logo}
                 alt="Sanoj Sistemas"
                 className="w-full h-full object-contain"
               />
