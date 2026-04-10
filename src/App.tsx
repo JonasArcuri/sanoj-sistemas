@@ -69,7 +69,7 @@ export default function App() {
               Contato
             </a>
             <a
-              href="https://wa.me/47988814411"
+              href="https://wa.me/47999065181"
               className="pulse-gradient text-on-primary px-6 py-2.5 rounded-md font-bold hover:scale-105 transition-transform text-sm uppercase tracking-wider shadow-lg shadow-primary/40"
             >
               WhatsApp
@@ -399,7 +399,7 @@ export default function App() {
                 className="glass-card p-8 rounded-xl border border-outline-variant/10 flex flex-col justify-center gap-6"
               >
                 <motion.a
-                  href="https://wa.me/47988814411"
+                  href="https://wa.me/47999065181"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.02 }}
@@ -521,7 +521,7 @@ export default function App() {
               Contato Direto
             </h4>
             <p className="text-on-surface-variant text-sm">
-              WhatsApp: 47 98881-4411
+              WhatsApp: (47) 9 9906-5181
             </p>
             <p className="text-on-surface-variant text-xs mt-8">
               © 2026 Sanoj Sistemas. Todos os direitos reservados.
