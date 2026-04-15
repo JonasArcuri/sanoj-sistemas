@@ -386,7 +386,7 @@ export default function App() {
                   <ContactInfo
                     icon={<Mail className="w-6 h-6" />}
                     label="E-mail"
-                    value="sanojsistemas@gmail.com.br"
+                    value="sanojsistemas@gmail.com"
                   />
                 </div>
               </motion.div>
