@@ -250,7 +250,7 @@ export default function App() {
                     className="bg-primary p-6 rounded-lg shadow-lg shadow-primary/20"
                   >
                     <span className="text-on-primary text-4xl font-bold font-headline">
-                      2+
+                      5+
                     </span>
                     <p className="text-on-primary/80 font-bold text-sm uppercase">
                       Anos de Expertise
