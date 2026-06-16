@@ -209,13 +209,13 @@ export default function App() {
                 title="Criação de Websites"
                 description="Sites institucionais modernos com design responsivo, focados em usabilidade e performance em qualquer dispositivo."
                 className="md:translate-y-8"
-                delay={0.2}
+                delay={0.1}
               />
               <ServiceCard
                 icon={<Zap className="w-8 h-8" />}
                 title="Landing Pages Otimizadas"
                 description="Focadas em conversão, nossas landing pages são construídas para transformar visitantes em clientes reais de forma imediata."
-                delay={0.3}
+                delay={0.1}
               />
             </div>
           </div>
@@ -505,7 +505,10 @@ export default function App() {
                 Social
               </h4>
               <div className="flex gap-4">
-                <SocialLink icon={<Instagram className="w-5 h-5" />} href="#" />
+                <SocialLink
+                  icon={<Instagram className="w-5 h-5" />}
+                  href="https://www.instagram.com/sanojsistemas/"
+                />
               </div>
             </motion.div>
           </div>
@@ -579,10 +582,13 @@ function ServiceCard({
       <p className="text-on-surface-variant mb-6 leading-relaxed">
         {description}
       </p>
-      <div className="flex items-center text-primary font-bold gap-2 cursor-pointer">
-        Saiba mais{" "}
+      <a
+        href="#contato"
+        className="flex items-center text-primary font-bold gap-2 cursor-pointer"
+      >
+        Saiba mais
         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-      </div>
+      </a>
     </motion.div>
   );
 }
