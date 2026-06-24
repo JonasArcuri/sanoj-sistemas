@@ -1,14 +1,477 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="assets/Logo.png" type="image/x-icon">
-    <title>Sanoj Sistemas</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanoj Sistemas | Tecnologia de Ponta</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- CANVAS BACKGROUND THREE.JS -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="header" id="inicio">
+        <nav class="navbar">
+            <div class="logo">SANOJ<span>.</span>SISTEMAS</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Home</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#portfolio">Sistemas</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </ul>
+            <a href="#contato" class="nav-cta">Entre em contato</a>
+            <button class="menu-toggle" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="eyebrow">// Inovação em Joinville</p>
+            <h1>Transformamos ideias em <span class="accent">infraestrutura digital.</span></h1>
+            <p class="hero-sub">Desenvolvemos sistemas de ponta a ponta — ecossistemas digitais de alta performance para
+                escalar o seu negócio.</p>
+            <div class="divider-line"></div>
+            <a href="#contato" class="btn-cta">
+                Inicie seu Projeto
+                <span class="btn-arrow">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </span>
+            </a>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-code-window">
+                <div class="window-bar">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                    <span class="window-title">sanoj_sistemas.js</span>
+                </div>
+                <div class="code-body">
+                    <pre><code><span class="code-kw">const</span> <span class="code-var">sanoj</span> = {
+  <span class="code-key">missão</span>: <span class="code-str">'Inovar'</span>,
+  <span class="code-key">stack</span>: [<span class="code-str">'React'</span>, <span class="code-str">'Node.js'</span>, <span class="code-str">'Next.js'</span>],
+  <span class="code-key">localização</span>: <span class="code-str">'Joinville-SC'</span>,
+  <span class="code-key">clientes</span>: <span class="code-str">'Todo o Brasil'</span>,
+  <span class="code-key">entrega</span>: <span class="code-str">'Alta Performance'</span>,
+
+  <span class="code-key">construir</span>: <span class="code-kw">async</span> (ideia) =&gt; {
+    <span class="code-kw">const</span> <span class="code-var">sistema</span> = <span class="code-kw">await</span> transformar(ideia);
+    <span class="code-kw">return</span> sistema.escalar();
+  }
+};</code></pre>
+                    <div class="code-cursor"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech logos strip at bottom -->
+        <div class="tech-strip">
+            <div class="tech-strip-inner">
+                <span>React</span>
+                <span class="strip-dot">·</span>
+                <span>Node.js</span>
+                <span class="strip-dot">·</span>
+                <span>Next.js</span>
+                <span class="strip-dot">·</span>
+                <span>PostgreSQL</span>
+                <span class="strip-dot">·</span>
+                <span>AWS Cloud</span>
+                <span class="strip-dot">·</span>
+                <span>CSS</span>
+                <span class="strip-dot">·</span>
+                <span>TypeScript</span>
+                <span class="strip-dot">·</span>
+                <span>HTML</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SERVIÇOS ===================== -->
+    <section class="services" id="servicos">
+        <div class="services-header">
+            <h2>Nossos <span class="accent">Serviços</span></h2>
+            <p>Somos especialistas em desenvolvimento de software, utilizamos tecnologias de ponta e metodologias ágeis
+                para oferecer soluções digitais personalizadas.</p>
+        </div>
+
+        <div class="services-body">
+            <div class="services-list">
+                <div class="service-item active" data-service="sistemas">
+                    <div class="service-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <div class="service-text">
+                        <h3>Sistemas Personalizados</h3>
+                        <p>Software sob medida em utilizando as mais mordernas tecnologias do mercado. Estamos Prontos para para otimizar seus processos e escalar sua operação
+                            com segurança.</p>
+                    </div>
+                </div>
+
+                <div class="service-item" data-service="websites">
+                    <div class="service-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="service-text">
+                        <h3>Criação de Websites</h3>
+                        <p>Sites institucionais modernos com design responsivo, focados em usabilidade, SEO e
+                            performance em qualquer dispositivo.</p>
+                    </div>
+                </div>
+
+                <div class="service-item" data-service="landing">
+                    <div class="service-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                    </div>
+                    <div class="service-text">
+                        <h3>Landing Pages</h3>
+                        <p>Focadas em conversão. Construídas com Next.js e Tailwind para transformar visitantes em
+                            clientes reais.</p>
+                    </div>
+                </div>
+
+                <div class="service-item" data-service="api">
+                    <div class="service-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                    </div>
+                    <div class="service-text">
+                        <h3>APIs &amp; Integrações</h3>
+                        <p>Conectamos sistemas, automatizamos fluxos e desenvolvemos APIs robustas que fazem seus dados
+                            trabalharem por você.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-visual">
+                <div class="service-visual-panel active" id="sv-sistemas">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800"
+                        alt="Sistemas Personalizados">
+                </div>
+                <div class="service-visual-panel" id="sv-websites">
+                    <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&q=80&w=800"
+                        alt="Criação de Websites">
+                </div>
+                <div class="service-visual-panel" id="sv-landing">
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=800"
+                        alt="Landing Pages">
+                </div>
+                <div class="service-visual-panel" id="sv-api">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800"
+                        alt="APIs e Integrações">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== PORTFOLIO / SISTEMAS ===================== -->
+    <section class="portfolio" id="portfolio">
+        <div class="portfolio-showcase">
+            <!-- Big visual above -->
+            <div class="showcase-header">
+                <div class="watermark-text">SANOJ</div>
+                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=1200"
+                    alt="Sistema desenvolvido pela Sanoj" class="showcase-img">
+            </div>
+
+            <!-- Two project cards below -->
+            <div class="showcase-grid">
+                <div class="showcase-card" id="card-obraflux">
+                    <div class="showcase-card-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                    </div>
+                    <h3>ObraFlux <span class="accent">Sistema</span></h3>
+                    <p><strong>Características:</strong></p>
+                    <ul>
+                        <li>Gestão completa de obras e orçamentos em tempo real</li>
+                        <li>Fluxo automatizado: vendas, execução e acompanhamento</li>
+                        <li>Construído em React, Node.js e PostgreSQL</li>
+                    </ul>
+                </div>
+
+                <div class="showcase-card" id="card-evolve">
+                    <div class="showcase-card-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Evolve <span class="accent">Sistema</span></h3>
+                    <p><strong>Características:</strong></p>
+                    <ul>
+                        <li>Gestão jurídica com acompanhamento processual automatizado</li>
+                        <li>Controle financeiro integrado e portal do cliente</li>
+                        <li>Desenvolvido em Next.js, Python e AWS Cloud</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SOBRE / TECNOLOGIAS ===================== -->
+    <section class="about" id="sobre">
+        <div class="about-header">
+            <h2>Tecnologias que <span class="accent">dominamos</span></h2>
+        </div>
+
+        <div class="about-body">
+            <div class="about-left">
+                <h3>Por que a <span class="accent">Sanoj</span> é a sua melhor escolha</h3>
+                <div class="why-grid">
+                    <div class="why-item">
+                        <div class="why-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <div>
+                            <strong>Código de Qualidade</strong>
+                            <p>Escrevemos código limpo, testado e documentado seguindo os mais altos padrões do mercado.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <div>
+                            <strong>Entrega Ágil</strong>
+                            <p>Metodologia ágil com sprints curtos e entregas incrementais que geram valor desde o dia
+                                um.</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <strong>Segurança Total</strong>
+                            <p>Infraestrutura segura, com backups automatizados e monitoramento 24/7 em produção.</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <strong>Suporte Dedicado</strong>
+                            <p>Time especializado disponível para garantir a evolução contínua do seu sistema.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-right">
+                <div class="tech-grid-title">Tecnologias que <span class="accent">utilizamos</span></div>
+                <div class="tech-logos-grid">
+                    <div class="tech-logo-card">
+                        <span class="tech-name">React</span>
+                    </div>
+                    <div class="tech-logo-card">
+                        <span class="tech-name">Node.js</span>
+                    </div>
+                    <div class="tech-logo-card">
+                        <span class="tech-name">Next.js</span>
+                    </div>
+                    <div class="tech-logo-card">
+                        <span class="tech-name">TypeScript</span>
+                    </div>
+                    <div class="tech-logo-card">
+                        <span class="tech-name">PostgreSQL</span>
+                    </div>
+                    <div class="tech-logo-card">
+                        <span class="tech-name">Java</span>
+                    </div>
+                    <div class="tech-logo-card">
+                        <span class="tech-name">AWS Cloud</span>
+                    </div>
+                    <div class="tech-logo-card">
+                        <span class="tech-name">Docker</span>
+                    </div>
+                    <div class="tech-logo-card">
+                        <span class="tech-name">Tailwind</span>
+                    </div>
+                    <div class="tech-logo-card">
+                        <span class="tech-name">CSS</span>
+                    </div>
+                    <div class="tech-logo-card">
+                        <span class="tech-name">Html</span>
+                    </div>
+                    <div class="tech-logo-card">
+                        <span class="tech-name">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== PROCESSO ===================== -->
+    <section class="process" id="processo">
+        <div class="process-header">
+            <h2>Nosso <span class="accent">Processo</span></h2>
+            <p>Metodologia ágil testada e aprovada em dezenas de projetos entregues com sucesso.</p>
+        </div>
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-num">01</div>
+                <h4>Descoberta</h4>
+                <p>Imersão total no seu negócio para entender desafios, objetivos e oportunidades reais.</p>
+            </div>
+            <div class="step-connector"></div>
+            <div class="process-step">
+                <div class="step-num">02</div>
+                <h4>Arquitetura</h4>
+                <p>Planejamento técnico completo e design de UX focado na experiência do usuário final.</p>
+            </div>
+            <div class="step-connector"></div>
+            <div class="process-step">
+                <div class="step-num">03</div>
+                <h4>Desenvolvimento</h4>
+                <p>Codificação limpa e segura em sprints curtos com entregas incrementais constantes.</p>
+            </div>
+            <div class="step-connector"></div>
+            <div class="process-step">
+                <div class="step-num">04</div>
+                <h4>Lançamento</h4>
+                <p>Deploy otimizado, monitoramento ativo e suporte contínuo para evolução digital.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CONTATO / FOOTER ===================== -->
+    <footer class="footer" id="contato">
+        <!-- CTA card section (like image 5) -->
+        <div class="footer-cta-wrap">
+            <div class="footer-cta-card">
+                <div class="footer-cta-content">
+                    <h2>Sistemas de <span class="accent">Alta Performance</span><br>Para o Seu Negócio.</h2>
+                    <p>Oferecemos o desenvolvimento mais especializado e eficiente do mercado, combinando inovação,
+                        qualidade e segurança.</p>
+                    <a href="https://wa.me/5547999065181" target="_blank" class="btn-cta">
+                        Entre em contato
+                        <span class="btn-arrow">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+                <div class="footer-cta-visual">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=700"
+                        alt="Tecnologia Sanoj">
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer nav bar (like image 5 bottom) -->
+        <div class="footer-bar">
+            <div class="footer-logo">SANOJ<span class="accent">.</span>SISTEMAS</div>
+            <nav class="footer-nav">
+                <a href="#inicio">Home</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#portfolio">Sistemas</a>
+                <a href="#sobre">Sobre</a>
+            </nav>
+            <div class="footer-socials">
+                <a href="https://instagram.com/sanojsistemas" target="_blank" aria-label="Instagram">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="https://wa.me/5547999065181" target="_blank" aria-label="WhatsApp">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="mailto:sanojsistemas@gmail.com" aria-label="E-mail">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                        </path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </a>
+                <a href="tel:+5547999065181" aria-label="Telefone">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.45 2 2 0 0 1 3.59 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.83a16 16 0 0 0 6.29 6.29l.87-.87a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 17">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <p class="copyright">© 2026 Sanoj Sistemas. Todos os direitos reservados. Joinville-SC.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
